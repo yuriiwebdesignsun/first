@@ -2,14 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'categories.dart';
 
-Color hexToColor(String hex) {
-  final buffer = StringBuffer();
-  if (hex.length == 6 || hex.length == 7) {
-    buffer.write('ff'); // Додати значення непрозорості (alpha)
-  }
-  buffer.write(hex.replaceFirst('#', '')); // Видалити '#'
-  return Color(int.parse(buffer.toString(), radix: 16));
-}
 
 class CategoryCard extends StatelessWidget {
   final Categories category;
